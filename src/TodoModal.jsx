@@ -22,6 +22,7 @@ const TodoModal = () => (
                 className="uk-input uk-margin-right uk-width-1-1"
                 type="text"
                 placeholder="Enter your name..."
+                required
               />
               <button className="uk-button uk-button-primary" type="submit">
                 Submit

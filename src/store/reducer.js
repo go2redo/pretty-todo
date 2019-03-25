@@ -5,7 +5,19 @@ import {
   SET_USERNAME
 } from './types'
 
-const defaultState = {}
+const defaultState = {
+  name: '',
+  todos: {
+    buyId: {
+      "0": {
+        id: null,
+        text: '',
+        checked: false
+      }
+    },
+    allIds: ["0"]
+  }
+}
 
 const rootReducer = (state = defaultState, action) => {
 
