@@ -1,9 +1,17 @@
 import React from 'react';
-import TodoListItemContainer from '../containers/TodoListItemContainer';
+import TodoListItem from '../components/TodoListItem';
 
-const TodoList = ({ todos }) => {
+const TodoList = ({ todos, editTodo, toogleTodo, deleteTodo }) => {
   const createList = todos =>
-    todos.map(item => <TodoListItemContainer key={item.id} data={item} />);
+    todos.map(item => (
+      <TodoListItem
+        key={item.id}
+        data={item}
+        toogleTodo={toogleTodo}
+        editTodo={editTodo}
+        deleteTodo={deleteTodo}
+      />
+    ));
 
   return <ul className="uk-list">{createList(todos)}</ul>;
 };

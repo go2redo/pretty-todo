@@ -8,26 +8,26 @@ import {
 
 let nextId = 0;
 
-export const addTodo = text => ({
+export const addTodo = payload => ({
   type: ADD_TODO,
   id: ++nextId,
-  text
+  text: payload
 })
-export const toogleTodo = id => ({
+export const toogleTodo = payload => ({
   type: TOOGLE_TODO,
-  id
+  id: payload
 })
-export const editTodo = (id, text) => ({
+export const editTodo = payload => ({
   type: EDIT_TODO,
-  id,
-  text
-})
-export const deleteTodo = id => ({
-  type: DELETE_TODO,
-  id
+  payload
 })
 
-export const setUserName = text => ({
+export const deleteTodo = payload => ({
+  type: DELETE_TODO,
+  id: payload
+})
+
+export const setUserName = payload => ({
   type: SET_USERNAME,
-  text
+  username: payload
 })

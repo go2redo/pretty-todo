@@ -30,7 +30,7 @@ const TodoListItem = ({ data, editTodo, toogleTodo, deleteTodo }) => {
             }`}
             type="text"
             defaultValue={text}
-            onChange={() => editTodo(data)}
+            onChange={e => editTodo(e, data)}
             name="editTodo"
           />
         </div>

@@ -53,9 +53,9 @@ const rootReducer = (state = initialState, action) => {
       return {
         ...state,
         todos: todos.map(
-          item => item.id === id ? {
+          item => item.id === action.payload.id ? {
             ...item,
-            text
+            text: action.payload.text
           } : item
         )
 
@@ -69,7 +69,8 @@ const rootReducer = (state = initialState, action) => {
 
     case SET_USERNAME:
       return {
-        username: action.text
+        ...state,
+        username: action.username
       }
 
     default:
