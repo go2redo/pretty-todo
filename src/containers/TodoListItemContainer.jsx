@@ -21,10 +21,9 @@ class TodoListItemContainer extends Component {
     this.props.deleteTodo(e.id);
   }
 
-  handleChange(id, text) {
-    console.log(id, text);
-    const { editTodo } = this.props;
-    editTodo(id, text);
+  handleChange(e) {
+    console.log(e.id, e.text);
+    this.props.editTodo(e.id, e.text);
   }
 
   render() {

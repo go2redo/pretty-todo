@@ -18,7 +18,7 @@ const TodoListItem = ({ data, editTodo, toogleTodo, deleteTodo }) => {
         </span>
         <div className="uk-inline uk-width-1-1">
           <button
-            type="submit"
+            type="button"
             className="app-outline-none uk-form-icon uk-form-icon-flip uk-text-danger"
             uk-icon="icon: minus-circle"
             onClick={() => deleteTodo(data)}
