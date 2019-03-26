@@ -45,7 +45,7 @@ export default connect(
   state => ({ todos: state.todos }),
   dispatch => ({
     toogleTodo: id => dispatch(toogleTodo(id)),
-    editTodo: (id, text) => dispatch(editTodo(id, text)),
+    editTodo: payload => dispatch(editTodo(payload)),
     deleteTodo: id => dispatch(deleteTodo(id)),
   }),
 )(TodoListContainer);

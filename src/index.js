@@ -11,6 +11,7 @@ import UIkit from 'uikit';
 import Icons from 'uikit/dist/js/uikit-icons';
 
 import './index.scss';
+
 import App from './components/App';
 
 UIkit.use(Icons);
