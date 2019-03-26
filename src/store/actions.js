@@ -1,25 +1,33 @@
 import {
   ADD_TODO,
+  TOOGLE_TODO,
   EDIT_TODO,
   DELETE_TODO,
   SET_USERNAME
 } from './types'
 
-export const addTodo = payload => ({
+let nextId = 0;
+
+export const addTodo = text => ({
   type: ADD_TODO,
-  payload
+  id: ++nextId,
+  text
 })
-export const editTodo = (id, payload) => ({
+export const toogleTodo = id => ({
+  type: TOOGLE_TODO,
+  id
+})
+export const editTodo = (id, text) => ({
   type: EDIT_TODO,
   id,
-  payload
+  text
 })
 export const deleteTodo = id => ({
   type: DELETE_TODO,
   id
 })
 
-export const setUserName = payload => ({
+export const setUserName = text => ({
   type: SET_USERNAME,
-  payload
+  text
 })

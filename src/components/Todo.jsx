@@ -1,6 +1,7 @@
 import React from 'react';
 import TodoModal from './TodoModal';
-import TodoList from './TodoList';
+import TodoListContainer from '../containers/TodoListContainer';
+import TodoListInputContainer from '../containers/TodoListInputContainer';
 
 const Todo = () => (
   <section className="app-todo-container uk-width-xlarge uk-card uk-card-default uk-card-hover ">
@@ -15,7 +16,8 @@ const Todo = () => (
       </h2>
     </div>
     <div className="uk-card-body">
-      <TodoList />
+      <TodoListInputContainer />
+      <TodoListContainer />
     </div>
   </section>
 );
