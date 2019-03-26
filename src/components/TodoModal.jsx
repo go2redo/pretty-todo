@@ -1,12 +1,12 @@
 import React from 'react';
 
-const TodoModal = ({ setUserName }) => {
+const TodoModal = ({ setUserName, username }) => {
   return (
     <div>
-      <span className="uk-link" href="" uk-toggle="#modal-full">
+      <span className="uk-link" href="" uk-toggle="#modal">
         <span uk-icon="icon: more" />
       </span>
-      <div id="modal-full" className="uk-modal-full" uk-modal="true">
+      <div id="modal" className="uk-modal-full" uk-modal="true">
         <div
           className="uk-modal-dialog uk-padding uk-flex uk-flex-wrap uk-flex-center uk-flex-middle"
           uk-height-viewport="true"
@@ -25,6 +25,7 @@ const TodoModal = ({ setUserName }) => {
                   placeholder="Enter your name..."
                   required
                   name="setUserName"
+                  defaultValue={username}
                 />
                 <button type="submit" className="uk-button uk-button-primary">
                   Submit

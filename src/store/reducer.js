@@ -6,14 +6,21 @@ import {
   SET_USERNAME
 } from './types'
 
+import {
+  save,
+  get,
+  exist,
+} from "../localStorage";
+
 const initialState = {
-  username: '',
+  username: exist() ? get().username : '',
   todos: []
 }
 
 const rootReducer = (state = initialState, action) => {
 
   const {
+    username,
     text,
     id
   } = action;
@@ -68,9 +75,14 @@ const rootReducer = (state = initialState, action) => {
       }
 
     case SET_USERNAME:
+
+      save({
+        username
+      })
+
       return {
         ...state,
-        username: action.username
+        username
       }
 
     default:

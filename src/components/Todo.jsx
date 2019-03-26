@@ -3,9 +3,8 @@ import TodoModalContainer from '../containers/TodoModalContainer';
 import TodoListContainer from '../containers/TodoListContainer';
 import TodoListInputContainer from '../containers/TodoListInputContainer';
 
-const Todo = ({ data }) => {
+const Todo = ({ data, setUserName }) => {
   const { username, todos } = data;
-
   return (
     <section className="app-todo-container uk-width-xlarge uk-card uk-card-default uk-card-hover ">
       <div className="uk-card-header">
@@ -14,7 +13,7 @@ const Todo = ({ data }) => {
             Hello
             {username ? ` ${username}` : ''}!
           </div>
-          <TodoModalContainer />
+          <TodoModalContainer username={username} setUserName={setUserName} />
         </h1>
         <h2 className="uk-h6 uk-margin-remove uk-text-uppercase uk-flex uk-flex-middle">
           <span className="uk-badge uk-margin-small-right">{todos.length}</span>
