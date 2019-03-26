@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import TodoModal from '../components/TodoModal';
 import UIkit from 'uikit';
 
-import { save, get, exist } from '../localStorage';
+import { exist } from '../localStorage';
 
 class TodoModalContainer extends Component {
   constructor(props) {
